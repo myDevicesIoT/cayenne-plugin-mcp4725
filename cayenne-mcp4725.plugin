@@ -1,0 +1,17 @@
+[MCP4725]
+enabled=true
+module=cayenne-mcp4725
+class=MCP4725
+read=read
+write=write
+
+[MCP4725_OUT]
+enabled=true
+channel=0
+module=cayenne-mcp4725
+class=AnalogOutput
+init_args={"plugin_id":"cayenne-mcp4725:MCP4725"}
+read=read
+read_args={"channel":$channel, "value_type":"float"}
+write=write
+write_args={"channel":$channel, "value_type":"float"}
